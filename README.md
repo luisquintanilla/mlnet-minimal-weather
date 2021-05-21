@@ -35,7 +35,7 @@ The data used for this model is from [NOAA](https://www.noaa.gov/). It contains 
     - [x] Station Name
     - Units: Standard
     - [x] Air Temperature
-        - [] Average temperature (TAVG)
+        - [ ] Average temperature (TAVG)
         - [x] Maximum temperature (TMAX)
         - [x] Minimum temperature (TMIN)
 
@@ -51,7 +51,7 @@ This sample uses the ML .NET [ForecastBySsa](https://docs.microsoft.com/en-us/do
 
 To train the model:
 
-1. Open the `weather-mlnet-model-train.ipynb` notebook.
+1. Open the *weather-mlnet-model-train.ipynb* notebook.
 1. Update the `dataPath` variable with the name of your file if called something other than *seattle-10yr.csv*.
 1. Run all the cells in the notebook.
 
