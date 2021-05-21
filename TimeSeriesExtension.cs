@@ -7,7 +7,7 @@ public static class TimeServiceExtensions
 {
     public static void AddTimeSeriesPredictionEngine(this IServiceCollection services, string modelPath)
     {       
-        services.AddSingleton<TimeSeriesPredictionEngine<ModelInput,ModelOutput>>(opt => 
+        services.AddSingleton<TimeSeriesPredictionEngine<ModelInput,ModelOutput>>(_ => 
         {
             MLContext ctx = new MLContext();
             var model =  ctx.Model.Load(modelPath, out var Schema);

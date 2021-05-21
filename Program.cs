@@ -5,43 +5,25 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.ML;
-using Microsoft.ML.Data;
 using Microsoft.ML.Transforms.TimeSeries;
 
 // Configure app
 var builder = WebApplication.CreateBuilder(args);
 
+// Register Time Series PredictionEngine service
 builder.Services.AddTimeSeriesPredictionEngine("WeatherForecastModel.zip");
 
 var app = builder.Build();
 
-// Define prediction route & handler
-app.MapGet("/predict",
-    (Func<Task<ModelOutput>>)
-    (async () =>
-    {
-        var engine = app.Services.GetRequiredService<TimeSeriesPredictionEngine<ModelInput,ModelOutput>>();
-        return await Task.FromResult(engine.Predict());
-    }));
+// Define handler
+Func<Task<ModelOutput>> predictHandler = async () => 
+{
+    var engine = app.Services.GetRequiredService<TimeSeriesPredictionEngine<ModelInput,ModelOutput>>();
+    return await Task.FromResult(engine.Predict());
+};
+
+// Define prediction route
+app.MapGet("/predict", predictHandler);
 
 // Run app
 app.Run();
-
-public class ModelInput
-{
-    [LoadColumn(6)]
-    public DateTime Date { get; set; }
-
-    [LoadColumn(7)]
-    public float MaxTemp { get; set; }
-}
-
-public class ModelOutput
-{
-    // Maximum Temperature (Farenheit). Each element is a day in the future it's forecasting for
-    public float[] ForecastTemp { get; set; }
-
-    public float[] LowerBoundTemp { get; set; }
-
-    public float[] UpperBoundTemp { get; set; }
-}
