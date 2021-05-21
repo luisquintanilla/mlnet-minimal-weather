@@ -33,7 +33,7 @@ The data used for this model is from [NOAA](https://www.noaa.gov/). It contains 
 
 1. Submit request for data with the following options.
     - [x] Station Name
-    - Units: Standard
+    - Units: **Standard**
     - [x] Air Temperature
         - [ ] Average temperature (TAVG)
         - [x] Maximum temperature (TMAX)
