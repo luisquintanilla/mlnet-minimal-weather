@@ -389,3 +389,6 @@ FodyWeavers.xsd
 
 # Data
 Data/*.csv
+
+# Checkpoints
+.ipynb_checkpoints/*
