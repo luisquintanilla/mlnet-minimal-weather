@@ -57,11 +57,18 @@ To train the model:
 
 Once all the cells are run, it should generate the model and save it to a file called *WeatherForecastModel.zip*.
 
+## About the Web API
+
+Once the model is trained, it's hosted inside a .NET 6 ASP.NET Core Minimal Web API. The Web API consists of 3 files:
+
+- *Schema.cs*: Defines the `ModelInput` and `ModelOutput` classes specifying the schema of what the model expects for input and what it outputs as a prediction.  
+- *TimeSeriesExtension.cs*: Helper class to load the trained time series forecasting model and register it using dependency injection.
+- *Program.cs*: Web API configuration and routing logic.
+
 ## Making predictions
 
-Start the Web API project.
-
-Using a REST API client of your choice, make an HTTP `GET` request to `http://localhost:5000/predict`.
+1. Start the Web API project.
+2. Using a REST API client of your choice, make an HTTP `GET` request to `http://localhost:5000/predict`.
 
 The response should look similar like the following:
 
