@@ -25,29 +25,34 @@ The data used for this model is from [NOAA](https://www.noaa.gov/). It contains 
 
 1. Find a station https://www.ncdc.noaa.gov/cdo-web/datatools/findstation
 
-![image](https://user-images.githubusercontent.com/46974588/116326383-50f17f80-a792-11eb-9c66-3dabef398889.png)
+    ![image](https://user-images.githubusercontent.com/46974588/116326383-50f17f80-a792-11eb-9c66-3dabef398889.png)
 
 1. View cart and export **Custom GHCN-Daily CSV** format.
 
-![image](https://user-images.githubusercontent.com/46974588/116326449-78484c80-a792-11eb-8061-9c87bb6fc856.png)
+    ![image](https://user-images.githubusercontent.com/46974588/116326449-78484c80-a792-11eb-8061-9c87bb6fc856.png)
 
 1. Submit request for data with the following options.
     - [x] Station Name
     - Units: Standard
     - [x] Air Temperature
-        - [x] Average temperature (TAVG)
+        - [] Average temperature (TAVG)
         - [x] Maximum temperature (TMAX)
         - [x] Minimum temperature (TMIN)
 
-![image](https://user-images.githubusercontent.com/46974588/116326560-bd6c7e80-a792-11eb-8050-18f7f85193a5.png)
-
-After a few minutes, expect an e-mail with your dataset
+    ![image](https://user-images.githubusercontent.com/46974588/116326560-bd6c7e80-a792-11eb-8050-18f7f85193a5.png)
+    
+    After a few minutes, expect an e-mail with your dataset.
 
 1. Save your dataset to the *Data* directory.
 
 ## Training the model
 
-1. Open the `weather-mlnet-model-train.ipynb` notebook
+This sample uses the ML .NET [ForecastBySsa](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.timeseriescatalog.forecastbyssa?view=ml-dotnet) trainer to train a univariate time-series forecasting model for maximum temperatures.
+
+To train the model:
+
+1. Open the `weather-mlnet-model-train.ipynb` notebook.
+1. Update the `dataPath` variable with the name of your file if called something other than *seattle-10yr.csv*.
 1. Run all the cells in the notebook.
 
 Once all the cells are run, it should generate the model and save it to a file called *WeatherForecastModel.zip*.
