@@ -17,13 +17,13 @@ The data used for this model is from [NOAA](https://www.noaa.gov/). It contains 
 
 |STATION|NAME|LATITUDE|LONGITUDE|ELEVATION|DATE|TMAX|TMIN|
 |---|---|---|---|---|---|---|---|
-|USW00024234|"SEATTLE BOEING FIELD| WA US"|47.53028|-122.30083|6.1|4/1/2010|51|41|
-|USW00024234|"SEATTLE BOEING FIELD| WA US"|47.53028|-122.30083|6.1|4/2/2010|53|41|
-|USW00024234|"SEATTLE BOEING FIELD| WA US"|47.53028|-122.30083|6.1|4/3/2010|50|39|
+|USW00024234|"SEATTLE BOEING FIELD, WA US"|47.53028|-122.30083|6.1|4/1/2010|51|41|
+|USW00024234|"SEATTLE BOEING FIELD, WA US"|47.53028|-122.30083|6.1|4/2/2010|53|41|
+|USW00024234|"SEATTLE BOEING FIELD, WA US"|47.53028|-122.30083|6.1|4/3/2010|50|39|
 
 ## Getting the data
 
-1. Find a station https://www.ncdc.noaa.gov/cdo-web/datatools/findstation
+1. Find a station https://www.ncdc.noaa.gov/cdo-web/datatools/findstation. The data contains the **Daily Summaries** dataset for the **Air Temperature** categories.
 
     ![image](https://user-images.githubusercontent.com/46974588/116326383-50f17f80-a792-11eb-9c66-3dabef398889.png)
 
