@@ -9,7 +9,7 @@ This is a sample application that shows how to use [.NET Interactive](https://gi
     - [Visual Studio Code](https://code.visualstudio.com/)
     - [.NET Interactive Notebooks Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode)
 - Web API
-    - .NET 6 Preview 4
+    - [.NET 6 SDK Preview 4](https://dotnet.microsoft.com/download/dotnet/6.0)
 
 ## About the data
 
