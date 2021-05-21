@@ -3,7 +3,7 @@ using Microsoft.ML;
 using Microsoft.ML.Transforms.TimeSeries;
 using Microsoft.Extensions.DependencyInjection;
 
-public static class TimeServiceExtensions
+public static class TimeSeriesExtensions
 {
     public static void AddTimeSeriesPredictionEngine(this IServiceCollection services, string modelPath)
     {       

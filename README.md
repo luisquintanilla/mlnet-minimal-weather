@@ -62,7 +62,7 @@ Once all the cells are run, it should generate the model and save it to a file c
 Once the model is trained, it's hosted inside a .NET 6 ASP.NET Core Minimal Web API which also leverages some of the latest C# language features. The Web API consists of 3 files:
 
 - *Schema.cs*: Defines the `ModelInput` and `ModelOutput` classes specifying the schema of what the model expects for input and what it outputs as a prediction.  
-- *TimeSeriesExtension.cs*: Helper class to load the trained time series forecasting model and register it using dependency injection.
+- *TimeSeriesExtension.cs*: Helper `IServiceCollection` extension methods to load the trained time series forecasting model and register it using dependency injection.
 - *Program.cs*: Web API configuration and routing logic.
 
 ## Making predictions
